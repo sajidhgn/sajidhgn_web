@@ -19,7 +19,6 @@ defmodule SajidhgnWeb.ContactController do
       |> render("show.json", contact: contact)
     end
   end
-
   def show(conn, %{"id" => id}) do
     contact = Contacts.get_contact!(id)
     render(conn, "show.json", contact: contact)
